@@ -10,12 +10,10 @@ if (isset($_POST['sendersend'])){
 
     $recipient = "hello@prestonead.ie";
 
-    // mail($recipient, $subject, $message, $mailheader) 
-    // or die("Error!");
-
-    // echo "Your Email has been sent! I will get back to you as soon as possible";
-
-    echo $message;
-}
+    if (mail($recipient, $subject, $message, $mailheader)) {
+        echo "Email sent successfully";
+    } else {
+        echo "Error: Email failed to send";
+    }
 
 ?>
